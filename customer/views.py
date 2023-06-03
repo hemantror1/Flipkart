@@ -25,7 +25,7 @@ class GetAddressView(APIView):
        serializer = GetCustomerSerializer(instance,many=True)
        return Response(serializer.data)
    
-class CustomerDetailsAddressView(APIView):
+class GetCustomerDetailsAddressView(APIView):
    
    def get(self,request,pk):
        instance=Customer.objects.filter(id=pk)
